@@ -1,0 +1,17 @@
+---
+
+    - name: ensure java is at the latest version
+      apt: pkg=openjdk-7-jdk state=latest
+
+    - name: ensure "playframework/" directory exists
+      action: file path=/home/vagrant/playframework state=directory
+
+    - name: ensure unzip is at the latest version
+      apt: pkg=unzip state=latest
+
+    - name: Download play framework
+      get_url: url="http://downloads.typesafe.com/play/{{ play_version }}/play-{{ play_version }}.zip" dest=/home/vagrant/playframework/play-{{ play_version }}.zip
+
+    - name: Unzip play framework
+      raw: "if [ ! -d '/home/vagrant/playframework/play-{{ play_version }}' ]; then unzip -q /home/vagrant/playframework/play-{{ play_version }}.zip -d /home/vagrant/playframework ; fi;"
+
