@@ -1,0 +1,16 @@
+---
+- hosts: all
+  sudo: yes
+  vars: 
+    play_version: 2.2.1
+
+
+  tasks:
+    # Update APT Caches and make sure base packages are installed
+    - include: ./bootstrap/setup.yml
+
+    # Install MongoDB
+    - include: ./mongodb/setup.yml
+
+    # Install Play
+    - include: ./playframework/setup.yml
