@@ -20,3 +20,6 @@
     - python-software-properties # Dependencies for the apt module
     - software-properties-common
 
+
+- name: Update .bashrc with paths
+  template: src=templates/bashrc.j2 dest=/home/vagrant/.bashrc owner=vagrant mode=0644

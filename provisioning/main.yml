@@ -3,6 +3,8 @@
   sudo: yes
   vars: 
     play_version: 2.2.1
+    env_paths:
+      - "/home/vagrant/playframework/play-{{ play_version }}"
 
 
   tasks:
