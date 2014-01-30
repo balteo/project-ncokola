@@ -5,6 +5,10 @@
     play_version: 2.2.1
     env_paths:
       - "/home/vagrant/playframework/play-{{ play_version }}"
+    node_version: "0.10.12"
+    node_prefix: "node-v${node_version}"
+    node_tarball: "${node_prefix}.tar.gz"
+    node_path: "/usr/local"
 
 
   tasks:
@@ -16,3 +20,7 @@
 
     # Install Play
     - include: ./playframework/setup.yml
+
+    # Install Nodejs
+    - include: ./nodejs/setup.yml
+
