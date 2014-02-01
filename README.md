@@ -3,5 +3,5 @@ Project Ncokola
 
 
 ##### Interesting inspirational links:
-(https://github.com/gaspaio/ansible-repository)
-(https://github.com/torbjokv/play-vagrant)
+[ansible-repository](https://github.com/gaspaio/ansible-repository)
+[play-vagrant](https://github.com/torbjokv/play-vagrant)
